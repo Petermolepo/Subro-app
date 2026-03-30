@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Subro Insurance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Subro Insurance</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navReg" aria-controls="navReg" aria-expanded="false" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navReg">
+        <ul class="navbar-nav ms-auto fs-5">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="complaints-guide.html">Complaint Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="complaints.html">File a Complaint</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4">Create Account</h3>
+            <form id="registerForm">
+              <div class="mb-3"><label for="name">Full name</label><input id="name" class="form-control" placeholder="Enter your full name" title="Full name" required></div>
+              <div class="mb-3"><label for="email">Email</label><input id="email" type="email" class="form-control" placeholder="Enter your email address" title="Email" required></div>
+              <div class="mb-3"><label for="password">Password</label><input id="password" type="password" class="form-control" placeholder="Create a secure password" title="Password" required></div>
+              <div class="mb-4">
+                <label for="role">Role</label>
+                <select id="role" class="form-select" title="Role">
+                  <option value="subro_agent">Subrogation Agent</option>
+                  <option value="adjuster">Adjuster</option>
+                  <option value="insurer">Insurer</option>
+                </select>
+              </div>
+              <div id="regMsg" class="text-danger mb-3"></div>
+              <button class="btn btn-primary w-100" type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-primary text-white py-4 mt-auto">
+    <div class="container text-center small">&copy; 2025 Subro Insurance • info@subroinsurance.com • +1 800 123 4567</div>
+  </footer>
+  <script src="register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

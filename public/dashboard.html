@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Subro Insurance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: "Inter", sans-serif; background: #f8fafc; }
+    .stat-card { border-radius: .5rem; padding: 1.2rem; color: #fff; }
+    .card { border: none; border-radius: .5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">Subro Insurance</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navDash" aria-controls="navDash" aria-expanded="false" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navDash">
+        <ul class="navbar-nav ms-auto fs-5">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="complaints-guide.html">Complaint Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="complaints.html">File a Complaint</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>My Claims</h2>
+      <a href="new_claim.html" class="btn btn-primary"><i class="fas fa-plus"></i> New Claim</a>
+    </div>
+    <div id="statsRow" class="row mb-4"></div>
+    <div class="d-flex gap-2 mb-3 flex-wrap">
+      <input id="searchInput" class="form-control w-auto" placeholder="Search claim #, claimant...">
+      <select id="statusFilter" class="form-select w-auto" aria-label="Filter claims by status" title="Filter claims by status">
+        <option value="">All Statuses</option>
+        <option value="initiated">Initiated</option>
+        <option value="negotiation">Negotiation</option>
+        <option value="resolved">Resolved</option>
+        <option value="denied">Denied</option>
+      </select>
+      <button id="clearFilters" class="btn btn-outline-secondary">Clear</button>
+      <button id="exportCsv" class="btn btn-outline-success"><i class="fas fa-file-export"></i> Export CSV</button>
+    </div>
+    <div id="claimsArea"></div>
+    <nav><ul class="pagination justify-content-center" id="pagination"></ul></nav>
+  </main>
+  <footer class="bg-primary text-white py-4 mt-auto">
+    <div class="container text-center small">&copy; 2025 Subro Insurance • info@subroinsurance.com • +1 800 123 4567</div>
+  </footer>
+  <script src="dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.hero-overlay {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
