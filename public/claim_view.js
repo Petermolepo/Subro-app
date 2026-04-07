@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <strong>Amount Paid:</strong> $${(claim.amount_paid || 0).toFixed(2)}</p>
           <p>${escapeHtml(claim.description)}</p>
           <h5>Documents</h5>
-          <ul>${documents.map((d) => `<li><a href="/uploads/${d.filename}" target="_blank">${escapeHtml(d.original_name)}</a> <span class="text-muted">(${new Date(d.uploaded_at).toLocaleString()})</span></li>`).join("")}</ul>
+          <ul>${documents.map((d) => `<li><a href="/api/uploads/${d.filename}" target="_blank">${escapeHtml(d.original_name)}</a> <span class="text-muted">(${new Date(d.uploaded_at).toLocaleString()})</span></li>`).join("")}</ul>
         </div>
       </div>
       <div class="card mb-4">
